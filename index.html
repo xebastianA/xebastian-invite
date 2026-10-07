@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en" style=""><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "inverse-on-surface": "#eaf1ff", "on-surface": "#121c28", "surface-container-high": "#dfe9fa", "primary-fixed": "#d0e5fb", "error": "#ba1a1a", "inverse-surface": "#27313e", "inverse-primary": "#b4c9de", "secondary-fixed": "#d3e5f5", "primary": "#4a5e71", "surface-tint": "#4d6073", "on-secondary-fixed": "#0c1d29", "on-primary": "#ffffff", "on-tertiary-container": "#fffbff", "on-tertiary-fixed": "#201b12", "on-secondary-fixed-variant": "#394956", "on-primary-fixed": "#071d2d", "primary-container": "#63778a", "on-primary-container": "#fdfcff", "background": "#f8f9ff", "on-surface-variant": "#43474c", "outline": "#74777d", "secondary-fixed-dim": "#b8c9d9", "surface-container-lowest": "#ffffff", "secondary-container": "#d3e5f5", "surface-container-highest": "#d9e3f4", "tertiary": "#635b4f", "surface": "#f8f9ff", "on-error": "#ffffff", "surface-variant": "#d9e3f4", "on-tertiary": "#ffffff", "tertiary-fixed": "#ece1d1", "surface-container": "#e5eeff", "on-background": "#121c28", "primary-fixed-dim": "#b4c9de", "outline-variant": "#c3c7cc", "secondary": "#50606e", "tertiary-container": "#7c7367", "on-primary-fixed-variant": "#35495b", "error-container": "#ffdad6", "tertiary-fixed-dim": "#d0c5b6", "on-secondary-container": "#566674", "surface-container-low": "#eef4ff", "on-tertiary-fixed-variant": "#4d463b", "on-error-container": "#93000a", "surface-bright": "#f8f9ff", "surface-dim": "#d0dbec" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-desktop": "2rem", "margin-tablet": "2rem", "space-xs": "0.25rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "gutter": "1.25rem", "space-md": "1rem", "margin-desktop": "3.5rem", "space-sm": "0.5rem", "margin": "1rem" }, "fontFamily": { "label-md": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "title-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "body-sm": ["Plus Jakarta Sans"], "display": ["Playfair Display"], "headline-lg": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "display-mobile": ["Playfair Display"], "label-sm": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"] }, "fontSize": { "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600"}], "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "500"}], "title-lg": ["18px", {"lineHeight": "26px", "fontWeight": "600"}], "title-md": ["16px", {"lineHeight": "24px", "fontWeight": "600"}], "headline-lg-mobile": ["26px", {"lineHeight": "34px", "letterSpacing": "0em", "fontWeight": "400"}], "body-sm": ["12px", {"lineHeight": "18px", "fontWeight": "400"}], "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "400"}], "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "body-lg": ["16px", {"lineHeight": "26px", "fontWeight": "400"}], "body-md": ["14px", {"lineHeight": "22px", "fontWeight": "400"}], "display-mobile": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "400"}], "label-sm": ["10px", {"lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "600"}], "headline-sm": ["20px", {"lineHeight": "28px", "fontWeight": "600"}] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface flex flex-col min-h-screen selection:bg-secondary-container selection:text-on-secondary-container"><header class="fixed top-0 inset-x-0 z-50 bg-background/80 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-primary text-[20px]">favorite</span><h1 class="font-headline-sm text-headline-sm text-on-surface">Invitation</h1></div><div class="flex items-center gap-space-sm"><button aria-label="Share Invitation" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-on-surface transition-colors" onclick="shareInvitation()"><span class="material-symbols-outlined text-[20px]">share</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-20 bg-background"><div class="flex flex-col w-full px-margin pb-space-xl">
+<!-- Delicate Top Accent Label -->
+<div class="flex flex-col items-center justify-center pt-space-md pb-space-sm text-center">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container text-on-surface-variant shadow-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">You're Warmly Invited</span>
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+<p class="font-label-md text-label-md uppercase tracking-widest text-on-surface-variant">Honoring Parents-to-be</p>
+<p class="font-headline-sm text-headline-sm text-on-surface mt-0.5">Isabella &amp; Carlos</p>
+</div>
+<!-- Primary Keepsake Stationery Invitation Card -->
+<div class="relative w-full rounded-2xl bg-surface-container-lowest p-space-md shadow-xl flex flex-col items-center text-center overflow-hidden">
+<!-- Subtle Decorative Corner Accents -->
+<div class="absolute top-3 left-3 w-4 h-4 rounded-full bg-secondary-container opacity-40"></div>
+<div class="absolute top-3 right-3 w-4 h-4 rounded-full bg-secondary-container opacity-40"></div>
+<!-- Arch Illustration Frame -->
+<div class="relative w-full max-w-[270px] aspect-square rounded-t-full rounded-b-3xl p-3 bg-gradient-to-b from-surface-container-low via-surface-container to-surface-container-lowest shadow-inner flex flex-col items-center justify-center mb-space-md">
+<div class="w-full h-full rounded-t-full rounded-b-2xl overflow-hidden bg-surface-container-lowest flex items-center justify-center relative shadow-sm">
+<img alt="Baby shower watercolor teddy bear" class="w-full h-full object-contain p-2 transition-transform duration-700 hover:scale-105" src="https://lh3.googleusercontent.com/aida/AEtjO1X4qqIg8mn09es6NfvTpijviHkGbLvEyFvhh01Y7nno0fkrCS3Ii_L9EJC6MUHrPFE_m7Zt1CDd--A1LSuLR_Te9EfHoio4Kbh3qvMlWL97LtlLX1lW0QTlQdfF8G_gdJ_6BCe2lTbv6Hz7Gmo3atZGBpgirDIhnLMGbXnyfHpph9MHLgT04PcvTbKFxjzUBuBizKSAX0cdIx7Tln3f-rg5tgISAl4joS6CgeFudycC"/>
+</div>
+<!-- Soft Star Floating Badge -->
+<div class="absolute -bottom-2.5 px-space-md py-1 rounded-full bg-primary text-on-primary shadow-md flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">bedtime</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wider uppercase">Baby Xebastian</span>
+</div>
+</div>
+<!-- Announcement Headline -->
+<div class="mt-space-sm mb-space-sm max-w-xs">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface leading-snug">
+        A Sweet Little Bear is on His Way!
+      </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+        Join us in celebrating with joy and warmth as we welcome baby boy <span class="text-on-surface font-semibold">Xebastian</span> into the world.
+      </p>
+</div>
+<!-- Quick Date & Time Ribbon Tile -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md mt-space-xs shadow-sm flex items-center justify-around text-center">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-[22px] mb-0.5">calendar_month</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Date</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Sat, Nov 21</span>
+</div>
+<div class="w-px h-8 bg-surface-variant"></div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-primary text-[22px] mb-0.5">schedule</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Time</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">1:00 PM PST</span>
+</div>
+</div>
+</div>
+<!-- Countdown Pill Component -->
+<div class="mt-space-md w-full bg-surface-container rounded-xl p-space-md shadow-sm flex items-center justify-between" id="countdown-card">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Shower Countdown</span>
+<span class="font-title-md text-title-md text-on-surface truncate">Counting the days</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 shrink-0">
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest rounded-lg w-10 py-1 shadow-sm">
+<span class="font-title-md text-title-md text-primary font-bold" id="cd-days">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant -mt-1 scale-90">Days</span>
+</div>
+<span class="font-bold text-on-surface-variant">:</span>
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest rounded-lg w-10 py-1 shadow-sm">
+<span class="font-title-md text-title-md text-primary font-bold" id="cd-hours">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant -mt-1 scale-90">Hrs</span>
+</div>
+<span class="font-bold text-on-surface-variant">:</span>
+<div class="flex flex-col items-center justify-center bg-surface-container-lowest rounded-lg w-10 py-1 shadow-sm">
+<span class="font-title-md text-title-md text-primary font-bold" id="cd-mins">0</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant -mt-1 scale-90">Min</span>
+</div>
+</div>
+</div>
+<!-- Location & Map Card -->
+<div class="mt-space-md w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-md flex flex-col">
+<div class="flex items-start gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">pin_drop</span>
+</div>
+<div class="flex flex-col flex-1 min-w-0"><h3 class="font-title-lg text-title-lg text-on-surface">6713 Bright Gem Ct</h3><p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Eastvale, CA 92880, United States</p></div>
+</div>
+<!-- Map Preview Canvas -->
+<div class="w-full h-36 rounded-xl bg-cover bg-center shadow-inner relative overflow-hidden flex items-end justify-between p-3" data-location="6713 Bright Gem Ct, Eastvale, CA 92880" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAuUaT2t3odmlNWW7-1ltIxN2vR-jD5zzmLFr718kC-zuBgbtSORW3lW6qcYbWwIEqhdhuJTT9ArKTOJF7AI4Pfp71QVxfM4j6-DgFRkdQV4N8zTLUseue8kcSKYThDIjGfnmpV3lIXuorvhZxvUuAza-gn7fzNC6UDtmT-xA1A6j5W7NfHQHwamgOrrrmJ4dh2gsLsasilnDZgetkzOq_qCNwxbGeK2NP8ctkixD4')">
+<div class="bg-surface-container-lowest/90 backdrop-blur-md rounded-lg px-2.5 py-1 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-primary text-[16px]">navigation</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Eastvale, California</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm mt-space-sm">
+<a class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-transform active:scale-95" href="https://maps.google.com/?q=6713+Bright+Gem+Ct,+Eastvale,+CA+92880" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">map</span>
+<span class="">Open Maps</span>
+</a>
+<button class="flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-transform active:scale-95" id="copy-address-btn" onclick="copyAddress()">
+<span class="material-symbols-outlined text-[18px]" id="copy-address-icon">content_copy</span>
+<span id="copy-address-text">Copy Address</span>
+</button>
+</div>
+</div>
+<!-- RSVP Action Center -->
+<div class="mt-space-md w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-md flex flex-col">
+<div class="flex items-start gap-space-sm mb-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">mark_email_unread</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">RSVP Confirmation</span>
+<span class="font-title-lg text-title-lg text-on-surface mt-0.5">Kindly Respond by Nov 14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Please let us know if you can join our celebration so we can prepare food &amp; seats.</span>
+</div>
+</div>
+<div class="flex flex-col gap-2.5 mt-space-xs">
+<a class="w-full flex items-center justify-center gap-2 py-3.5 px-space-md rounded-full bg-primary text-on-primary font-title-md text-title-md shadow-md transition-all active:scale-95" href="sms:19096976877?&amp;body=Hi%20Isabella%20and%20Carlos!%20RSVPing%20for%20Xebastian's%20Baby%20Shower:">
+<span class="material-symbols-outlined text-[20px]">sms</span>
+<span class="">Text RSVP: (909) 697-6877</span>
+</a>
+<a class="w-full flex items-center justify-center gap-2 py-2.5 px-space-md rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm active:scale-95" href="tel:19096976877">
+<span class="material-symbols-outlined text-[18px]">call</span>
+<span class="">Call to RSVP</span>
+</a>
+</div>
+</div>
+<!-- Baby Registry Spotlight -->
+<div class="mt-space-md w-full rounded-2xl bg-surface-container-low p-space-md shadow-md flex flex-col">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">featured_seasonal_and_gifts</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Gift Registry</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Babylist Registry</h3>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm">Online</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed mb-space-md">
+      Your presence and love are our greatest gifts. For friends and family who have kindly inquired, baby gifts may be chosen through our curated Babylist wishlist.
+    </p>
+<!-- Visual registry teaser items -->
+<div class="grid grid-cols-2 gap-space-sm mb-space-md">
+<a class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-lowest shadow-sm transition-transform active:scale-95" href="https://my.babylist.com/baby-isabella-prieto" rel="noopener noreferrer" target="_blank">
+<img class="w-12 h-12 rounded-lg object-cover" data-alt="Soft knitted organic cotton baby blanket in slate blue and warm ivory tones on a clean nursery dresser." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDD4JVJ97YoqjxrLb1lOh71B9Z9BcP8W3lFiypBItVKAXnORwRhuQHkrP7BekG3aglbWFYn9IeLmfWG2Af5FJ0d5E7KYikX5blYGk5APtPdoq6FlfVVqnvd1K-1WsIHKHHfPRB_743iXuGTTRPm6QfutJ4Q9ptgIxn4vkatTqWS1t-CVdwpjaRgd2xPrKpcgDjQXj_JbZxD0sb_iYUtDvAVGXkZ43QTR1Kl9vWXqs"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm font-semibold text-on-surface truncate">Nursery Bedding</span>
+<span class="font-label-sm text-label-sm text-primary">On Babylist</span>
+</div>
+</a>
+<a class="flex items-center gap-2 p-2 rounded-xl bg-surface-container-lowest shadow-sm transition-transform active:scale-95" href="https://my.babylist.com/baby-isabella-prieto" rel="noopener noreferrer" target="_blank">
+<img class="w-12 h-12 rounded-lg object-cover" data-alt="Modern wooden sensory toys and organic teddy bear on a soft cream linen blanket, natural lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbS8aW9pqrAKzOq1zF8NgxMbk_AiiB7Pnp1l9Fo4GHvJY-eR5DpawIfAPPCoEUNIU5_diAuvY_vsAJ6UiqngmAVanTPfZ-8oP6708DrLBUddXtwh7uPKVGBYDTcrwyMSLCwlWSSLfYTfglBTYO06uWzGfsRXrKtVUcFaRroWqK4OnQftLIcqZTJbQIEE42ANqgl53D7YxmKmTJLqI5hsVDvYDaZZBTRCWkv7US7tA"/>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-body-sm font-semibold text-on-surface truncate">Baby Essentials</span>
+<span class="font-label-sm text-label-sm text-primary">On Babylist</span>
+</div>
+</a>
+</div>
+<a class="w-full flex items-center justify-center gap-2 py-3 px-space-md rounded-full bg-primary text-on-primary font-title-md text-title-md shadow-md transition-all active:scale-95" href="https://my.babylist.com/baby-isabella-prieto" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">open_in_new</span>
+<span class="">View Wishlist &amp; Registry</span>
+</a>
+</div>
+<!-- Shower Day Schedule Timeline -->
+<div class="mt-space-md w-full bg-surface-container-lowest rounded-2xl p-space-md shadow-md flex flex-col">
+<div class="flex items-center gap-space-sm mb-space-md">
+<span class="material-symbols-outlined text-primary text-[22px]">event_note</span>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Flow of the Day</span>
+<h3 class="font-title-lg text-title-lg text-on-surface">Celebration Timeline</h3>
+</div>
+</div>
+<div class="relative pl-6 space-y-5 before:content-[''] before:absolute before:left-2.5 before:top-2 before:bottom-2 before:w-0.5 before:bg-secondary-container">
+<!-- Item 1 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">1:00 PM</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Welcome &amp; Refreshments</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mingle, enjoy welcome drinks, and sign the baby guest book</span>
+</div>
+<!-- Item 2 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">2:00 PM</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Luncheon &amp; Grazing Table</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Fresh bites and snacks</span>
+</div>
+<!-- Item 3 -->
+<div class="relative flex flex-col">
+<span class="absolute -left-6 top-1 w-3 h-3 rounded-full bg-primary ring-4 ring-surface-container-lowest"></span>
+<span class="font-label-sm text-label-sm text-primary font-bold tracking-wider uppercase">3:00 PM</span>
+<span class="font-title-md text-title-md text-on-surface mt-0.5">Baby Games &amp; Cake Cutting</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Sweet wishes, cheerful games, and celebratory dessert</span>
+</div>
+</div>
+</div>
+<!-- Interactive Utility Actions: Calendar & Share -->
+<div class="grid grid-cols-2 gap-space-sm mt-space-md">
+<button class="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md shadow-sm transition-transform active:scale-95" id="cal-btn" onclick="addToCalendar()">
+<span class="material-symbols-outlined text-[18px] text-primary">calendar_add_on</span>
+<span class="">Add to Calendar</span>
+</button>
+<button class="flex items-center justify-center gap-1.5 py-3 px-3 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-md transition-transform active:scale-95" id="share-btn" onclick="shareInvitation()">
+<span class="material-symbols-outlined text-[18px]">share</span>
+<span class="">Share Card</span>
+</button>
+</div>
+<!-- Tender Keepsake Footnote -->
+<div class="mt-space-lg text-center flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center mb-space-xs text-primary">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">We Can't Wait to Celebrate with You</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">With love, Isabella &amp; Carlos</p>
+</div>
+</div>
+<!-- Floating Toast Notification -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg flex items-center gap-2 opacity-0 pointer-events-none transition-all duration-300 font-label-md text-label-md" id="toast-notification">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" id="toast-icon">check_circle</span>
+<span id="toast-message">Success</span>
+</div>
+<script>
+  function showToast(msg, icon = 'check_circle') {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-message');
+    const toastIcon = document.getElementById('toast-icon');
+    if (!toast) return;
+    toastText.innerText = msg;
+    toastIcon.innerText = icon;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2500);
+  }
+
+  // Copy Address Functionality
+  function copyAddress() {
+    const fullAddress = '6713 Bright Gem Ct, Eastvale, CA 92880, United States';
+    const btnText = document.getElementById('copy-address-text');
+    const btnIcon = document.getElementById('copy-address-icon');
+
+    const copyFallback = () => {
+      const textArea = document.createElement('textarea');
+      textArea.value = fullAddress;
+      textArea.style.position = 'fixed';
+      textArea.style.left = '-9999px';
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+      } catch (e) {}
+      document.body.removeChild(textArea);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(fullAddress).then(() => {
+        onCopied();
+      }).catch(() => {
+        copyFallback();
+        onCopied();
+      });
+    } else {
+      copyFallback();
+      onCopied();
+    }
+
+    function onCopied() {
+      if (btnText) btnText.innerText = 'Address Copied!';
+      if (btnIcon) btnIcon.innerText = 'done';
+      showToast('Address copied to clipboard!');
+      setTimeout(() => {
+        if (btnText) btnText.innerText = 'Copy Address';
+        if (btnIcon) btnIcon.innerText = 'content_copy';
+      }, 2500);
+    }
+  }
+
+  // Countdown Timer to Saturday Nov 21 at 1:00 PM PST
+  function updateCountdown() {
+    // Target: Saturday Nov 21, 1:00 PM (13:00) PST
+    const now = new Date();
+    let currentYear = now.getFullYear();
+    // Nov 21 13:00 PST is UTC 21:00
+    let target = new Date(`November 21, ${currentYear} 13:00:00 GMT-0800`);
+    if (now > target) {
+      target = new Date(`November 21, ${currentYear + 1} 13:00:00 GMT-0800`);
+    }
+
+    const diff = target - now;
+
+    if (diff <= 0) {
+      const d = document.getElementById('cd-days');
+      const h = document.getElementById('cd-hours');
+      const m = document.getElementById('cd-mins');
+      if (d) d.innerText = '0';
+      if (h) h.innerText = '0';
+      if (m) m.innerText = '0';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    const d = document.getElementById('cd-days');
+    const h = document.getElementById('cd-hours');
+    const m = document.getElementById('cd-mins');
+    if (d) d.innerText = days;
+    if (h) h.innerText = hours;
+    if (m) m.innerText = mins;
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 60000);
+
+  // Add to Calendar: offers Google Calendar direct link and .ics download
+  function addToCalendar() {
+    const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+    // Generate .ics data
+    const icsData = [
+      "BEGIN:VCALENDAR",
+      "VERSION:2.0",
+      "PRODID:-//Baby Shower Isabella and Carlos//EN",
+      "CALSCALE:GREGORIAN",
+      "METHOD:PUBLISH",
+      "BEGIN:VEVENT",
+      "SUMMARY:Baby Shower: Baby Xebastian!",
+      "DESCRIPTION:Celebrating baby boy Xebastian with Isabella and Carlos! RSVP: (909) 697-6877. Registry: https://my.babylist.com/baby-isabella-prieto",
+      "LOCATION:6713 Bright Gem Ct, Eastvale, CA 92880",
+      "DTSTART:20261121T210000Z",
+      "DTEND:20261122T010000Z",
+      "STATUS:CONFIRMED",
+      "END:VEVENT",
+      "END:VCALENDAR"
+    ].join("\r\n");
+
+    const googleCalendarUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Xebastian%27s+Baby+Shower&dates=20241121T210000Z/20241122T010000Z&details=Celebrating+baby+boy+Xebastian+with+Isabella+and+Carlos!&location=6713+Bright+Gem+Ct,+Eastvale,+CA+92880";
+
+    try {
+      const blob = new Blob([icsData], { type: "text/calendar;charset=utf-8" });
+      const link = document.createElement("a");
+      link.href = window.URL.createObjectURL(blob);
+      link.setAttribute("download", "Xebastian_Baby_Shower.ics");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      showToast('Calendar invite (.ics) downloaded!', 'calendar_month');
+    } catch (e) {
+      window.open(googleCalendarUrl, '_blank');
+    }
+  }
+
+  // Native Web Share API with fallback
+  function shareInvitation() {
+    const shareData = {
+      title: "Baby Xebastian's Shower Invitation",
+      text: "Join us in celebrating with Isabella & Carlos for baby Xebastian on Sat, Nov 21 at 1:00 PM!",
+      url: window.location.href
+    };
+
+    if (navigator.share && navigator.canShare && navigator.canShare(shareData)) {
+      navigator.share(shareData).catch(() => {});
+    } else if (navigator.share) {
+      navigator.share(shareData).catch(() => {});
+    } else {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast('Invitation link copied to clipboard!', 'share');
+        });
+      } else {
+        showToast('Link ready to share!', 'share');
+      }
+      const btn = document.getElementById('share-btn');
+      if (btn) {
+        const originalHTML = btn.innerHTML;
+        btn.innerHTML = '<span class="material-symbols-outlined text-[18px]">done</span><span>Link Copied!</span>';
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+        }, 2500);
+      }
+    }
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-background/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.03)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-20 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 transition-colors text-primary font-bold" data-path="invitation" href="#"><span class="material-symbols-outlined text-[22px]">mark_email_read</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Invitation</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="schedule" href="#"><span class="material-symbols-outlined text-[22px]">event_upcoming</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Schedule</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="registry" href="#"><span class="material-symbols-outlined text-[22px]">featured_seasonal_and_gifts</span><span class="font-label-sm text-label-sm uppercase tracking-wider">Registry</span></a><a class="flex flex-col items-center justify-center gap-1 min-w-[64px] h-12 text-on-surface-variant hover:text-on-surface transition-colors" data-path="rsvp-status" href="#"><span class="material-symbols-outlined text-[22px]">how_to_reg</span><span class="font-label-sm text-label-sm uppercase tracking-wider">RSVP</span></a></div></nav>
+</body></html>
